@@ -13,6 +13,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
+import com.example.rickmorty.ui.theme.Green40
+import com.example.rickmorty.ui.theme.Red40
 
 
 @Composable
@@ -59,8 +61,8 @@ fun CharacterCard(
                     text = status,
                     style = MaterialTheme.typography.bodySmall,
                     color = when (status.lowercase()) {
-                        "alive" -> Color.Green
-                        "dead" -> Color.Red
+                        "alive" -> Green40
+                        "dead" -> Red40
                         else -> Color.Gray
                     }
                 )
