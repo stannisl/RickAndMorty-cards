@@ -22,7 +22,7 @@ object RickApiService {
                         .body<CharacterListDTO>()
                 } catch (e: Exception) {
                     println("Error fetching page $page: ${e.message}")
-                    return@getAllCharacters emptyList()
+                    return emptyList()
                 }
 
                 response.results.let { characters ->
@@ -41,6 +41,6 @@ object RickApiService {
     }
 
     suspend fun getCharacterById(id: Int) : CharacterDTO {
-        return NetworkModule.publicClient.get("$BASE_URL/character").body()
+        return NetworkModule.publicClient.get("$BASE_URL/character/$id").body()
     }
 }
