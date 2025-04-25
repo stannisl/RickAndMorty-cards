@@ -11,6 +11,7 @@ data class CharacterDTO(
     val type: String,
     val gender: String,
     val origin: LocationDTO,
+    val episode: List<String>,
     val location: LocationDTO,
     val image: String,
     val url: String,
